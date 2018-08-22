@@ -1,6 +1,6 @@
-# Missionaries and Cannibals problem
+# Lucas problem
 
-This program solves the lucas's puzzle. This is part of an exercise from computational intelligence class.
+This program solves the lucas puzzle. This is part of an exercise from computational intelligence class.
 
 Puzzle: 
 
