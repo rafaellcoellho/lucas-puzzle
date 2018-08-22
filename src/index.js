@@ -14,4 +14,4 @@ stateTree.addNode(firstState);
 	
 stateTree.end = objetiveState;
 
-// stateTree.bfs();
+stateTree.bfs();

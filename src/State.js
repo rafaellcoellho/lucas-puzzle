@@ -2,13 +2,6 @@ class State {
     constructor(arrowPositions) {
         this.arrowPositions = arrowPositions;
     }
-    isEqual(anotherState) {
-        for (let i=0;i<this.arrowPositions.length;i++) {
-            if (this.arrowPositions[i] != anotherState.arrowPositions[i])
-                return false;
-        }
-        return true;
-    }
     isPossibleMove(index) {
         if(this.arrowPositions[index] == ">") {
             if (index == (this.arrowPositions.length - 1) ) {
@@ -56,7 +49,15 @@ class State {
             }
         }
 
-        return arrayAux;
+        return new State(arrayAux);
+    }
+    isEqual(anotherState) {
+        for (let i=0;i<this.arrowPositions.length;i++) {
+            if (this.arrowPositions[i] != anotherState.arrowPositions[i]) {
+                return false;
+            }
+        }
+        return true;
     }
 }
 

@@ -19,7 +19,6 @@ class Graph {
         let auxState = Object.assign(Object.create(currentNode.state), currentNode.state);
         for (let i=0;i<auxState.arrowPositions.length;i++) {
             if (auxState.isPossibleMove(i)) {
-                auxState.moveArrow(i)
                 let n = new Node(auxState.moveArrow(i));
                 this.addNode(n);
                 currentNode.addEdge(n);
@@ -59,7 +58,10 @@ class Graph {
                 next = next.parent;
             } while (next != null);
 
-            console.log(path);
+            for(let i=(path.length-1), j=0;i>=0;i--,j++) {
+                console.log("State " + j + " " + path[i].state.arrowPositions);
+            }
+            // console.log(path);
         }
         else {
             console.log("Solution not found");
