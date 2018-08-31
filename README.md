@@ -20,11 +20,9 @@ either sliding it over to the adjacent square, or by jumping over one other mark
 
 ## How to run
 
-Just install nodejs and run:
-
 ```
 $ npm i
-$ node src/main.js
+$ npm run build
 ```
 
 ## Example 
